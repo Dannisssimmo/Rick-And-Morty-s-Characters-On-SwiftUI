@@ -45,10 +45,11 @@ struct CharactersList: View {
                         .padding()
                 }
                 if notFoundAnything {
-                    HStack {
+                    HStack(alignment: .bottom) {
                         Image("NothingFound")
-                            .padding(.leading, 10)
-                        Text("Try another name")
+                            .resizable()
+                        Text("I want new name from you!")
+                            .lineLimit(2)
                     }
                     .padding()
                     .background(Color(red: 0.082, green: 0.082, blue: 0.082))
